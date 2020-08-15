@@ -1,0 +1,134 @@
+body {
+  background-color:#2E2E2E;
+}
+#SiteTitle {
+  background-image: radial-gradient(#424242, #1C1C1C);
+  color:#088A08;
+  text-align:center;
+}
+
+.PanelHeader {
+	background-color:#1C1C1C;
+	color:#088A08;
+}
+
+p, label {
+  color: white;
+}
+
+/*------------------- Collapsibles ---------------------*/
+
+ /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+	background-color: #1C1C1C;
+	color: #088A08;
+	cursor: pointer;
+	padding: 18px;
+	/*width: 100%;*/
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 20px;
+	border-radius: 20px;
+
+	width: 250px;
+	height: 50px;
+	transition: width 1s, height 1s;
+  
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+	/*background-color: #848484;*/
+	width: 300px;
+	height: 100px;
+	
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #1C1C1C;
+  border-radius: 20px;
+} 
+
+/*-------------------- Display stuff as expandable cards -------------------------*/
+
+.allcards {
+	display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
+	
+}
+
+.card {
+	/* There will be 4 cards per row */
+	flex-basis: 25%;
+	padding-left: 8px;
+	padding-right: 8px;
+	
+}
+
+/* ------------ Forms & Labels --------------*/
+
+.paramform {
+    width: 120%;
+    margin: auto;
+}
+
+label, input {
+    /* In order to define widths */
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    /* Positions the label text beside the input */
+    text-align: right;
+}
+
+label + input {
+    width: 30%;
+    /* Large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+.submitbutton {
+	margin: auto;
+}
+
+​
+/*----------------- Link styles -----------------*/
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+	<title> EconSim </title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="keywords" content="agent-based, simulation, simulator, economy">
+	<meta name="description" content="Prototype page for EconSim">
+	<meta name="Author" content="Seth Thor">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</header>
+
+<!--------- content ----------->
+
+<body>
+
+<div>
+	<h1 id="SiteTitle"> EconSim </h1>
+</div>
+
+<!-- Expandable cards detailing simulation information -->
+
+<div>
+	<div class="allcards">
+		
+		<!-- A card with given width -->
+		<div class="card">
+			<button type="button" class="collapsible">Site description</button>
+			<div class="content">
+				<p>
+				  <!-- Click <a href="https://www.duckduckgo.com" target="_blank">ME</a> for duckduckgo! <br> -->
+
+				  Economy simulator was built using<br>
+
+				  Agent-based modeling where consumers <br>
+
+				  and producers negotiate deals based on<br>
+				  
+				  a stochastic algorithm that emulates how<br>
+				  
+				  people bargain. 
+				</p> 
+			</div>
+		</div>
+	
+		<div class="card">
+			<button type="button" class="collapsible">Parameter Selection</button>
+				<div class="content">
+					<form class="paramform">
+						<label for="Nconsumers">Consumers</label>
+						<input type="number" id="Nconsumers" name="numberofconsumers" value="Nconsumers"><br>
+						<label for="Nproducers">Producers</label>
+						<input type="number" id="Nproducers" name="numberofproducers" value="Nproducers"><br>
+						<label for="Iterations">Iterations</label>
+						<input type="number" id="iterations" name="iterations" value="iterations"><br><br>
+						<input class="submitbutton" type="submit" id="submitbutton" value="Enter">
+						<label for="submitbutton">Simulation initialized!</label>
+					</form>
+				</div>
+		</div>
+
+		<div class="card">
+			<button type="button" class="collapsible">Other panels</button>
+				<div class="content">
+					<form>
+						<input type="radio" id="consumers" name="agenttype" value="consumers">
+						<label for="consumers">Consumers</label><br>
+						<input type="radio" id="producers" name="agenttype" value="producers">
+						<label for="producers">Producers</label>
+					</form>
+					<br>
+					<form>			
+						<select id="agents" name="agents" size="4" multiple>
+							<option value="Consumer 1">Consumer 1</option>
+							<option value="Consumer 2">Consumer 2</option>
+						</select><br>
+					</form>
+				</div>
+		</div>
+
+	</div>
+	
+	<!-- Script for collapsible panels -->
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			  content.style.maxHeight = null;
+			} else {
+			  content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		  });
+		}
+	</script>
+
+</div>
+
+<!-- Analysis plot windows -->
+
+<div>
+
+
+
+</div>
+
+</body>
