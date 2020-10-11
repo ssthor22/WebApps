@@ -1,0 +1,51 @@
+0 NO.             1
+1 ***** Sequence and structural information*****
+2 PROTEIN         Phospholipase A2
+3 SOURCE          Bovine
+4 LENGTH          130
+5 MOL-WEIGHT      14536.12
+6 PIR_ID          PSBOA
+7 SWISSPROT_ID    PA21_BOVIN (P00593)
+8 E.C.NUMBER      
+9 PMD.NO          A930651
+10 PDB_wild        1BP2
+11 PDB_mutant      
+12 MUTATION        wild
+13 MUTATED_CHAIN   -
+14 NO_MOLECULE     1
+15 SEC.STR.        
+16 ASA             
+17  ***** Experimental condition *****
+18 T               30.0
+19 pH              8.0
+20 BUFFER_NAME     borate
+21 BUFFER_CONC     10 mM
+22 ION_NAME_1      
+23 ION_CONC_1      
+24 PROTEIN_CONC    5 mM
+25 MEASURE         CD
+26 METHOD          GdnHCl
+27 ***** Thermodynamic data *****
+28 dG_H2O          9.50
+29 ddG_H2O         
+30 dG
+31 ddG
+32 Tm              
+33 dTm             
+34 dHvH            
+35 dHcal           
+36 m               1.47
+37 Cm              6.90
+38 dCp             
+39 STATE           
+40 REVERSIBILITY   Unknown
+41 ACTIVITY
+42 ACTIVITY_Km     1.4
+43 ACTIVITY_Kcat   675
+44 ACTIVITY_Kd     
+45 ***** Literature *****
+46 KEY_WORDS       catalytic triad; PLA2; conformational stability; structural role
+47 REFERENCE       J AM CHEM SOC  115,     8523-8526 (1993) PMID:
+48 AUTHOR          Li Y. & Tsai M.-D.
+49 REMARKS         additive : EDTA(0.1 mM),
+50 RELATED_ENTRIES  2,3,4,
