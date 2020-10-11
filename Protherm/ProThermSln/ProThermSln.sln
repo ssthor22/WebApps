@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProTherm", "ProTherm\ProTherm.csproj", "{A18DA3D1-2A83-46EA-B1B2-8141ED0D3447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProTherm", "ProTherm\ProTherm.csproj", "{A18DA3D1-2A83-46EA-B1B2-8141ED0D3447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProTherm.Tests", "ProTherm.Tests\ProTherm.Tests.csproj", "{0F7003FA-2EFB-45E9-8E04-345975DE9158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProTherm.Tests", "ProTherm.Tests\ProTherm.Tests.csproj", "{0F7003FA-2EFB-45E9-8E04-345975DE9158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A18DA3D1-2A83-46EA-B1B2-8141ED0D3447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +41,11 @@ Global
 		{0F7003FA-2EFB-45E9-8E04-345975DE9158}.Release|x64.Build.0 = Release|Any CPU
 		{0F7003FA-2EFB-45E9-8E04-345975DE9158}.Release|x86.ActiveCfg = Release|Any CPU
 		{0F7003FA-2EFB-45E9-8E04-345975DE9158}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {921789AA-7F57-490B-9A33-09C6F29FA0F4}
 	EndGlobalSection
 EndGlobal

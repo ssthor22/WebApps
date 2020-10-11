@@ -18,7 +18,9 @@ namespace ProTherm.Controllers
             repository = repo;
         }
 
-        public IActionResult Index(int mutantPage = 1)
+        public IActionResult Index() => View();
+
+        public IActionResult Search(int mutantPage = 1)
             => View(new MutantsListViewModel
             {
                 Mutants = repository.Mutants

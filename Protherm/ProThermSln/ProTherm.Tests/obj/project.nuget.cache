@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3WGkE6b01BRaz8w7bMngmyZWN9M5ntIlMidjG9utUdVAmhY2tRzWTZZxHlM/+K+sUd5uLjGvXEfJWIasqO7cRQ==",
+  "dgSpecHash": "6ezk+7qEZcqVMPTM4I4bL817sCrefiUtV420cB26jCmBZkH4Mp2W69MeU1KWHrKvzDPJpZIz9cA0Q7ad0lyeag==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm.Tests\\ProTherm.Tests.csproj",
+  "projectFilePath": "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm.Tests\\ProTherm.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Seth\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Seth\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

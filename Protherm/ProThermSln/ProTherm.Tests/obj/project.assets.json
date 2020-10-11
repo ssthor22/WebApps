@@ -7925,11 +7925,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm.Tests\\ProTherm.Tests.csproj",
+      "projectUniqueName": "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm.Tests\\ProTherm.Tests.csproj",
       "projectName": "ProTherm.Tests",
-      "projectPath": "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm.Tests\\ProTherm.Tests.csproj",
+      "projectPath": "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm.Tests\\ProTherm.Tests.csproj",
       "packagesPath": "C:\\Users\\Seth\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm.Tests\\obj\\",
+      "outputPath": "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Seth\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7945,8 +7945,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm\\ProTherm.csproj": {
-              "projectPath": "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm\\ProTherm.csproj"
+            "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm\\ProTherm.csproj": {
+              "projectPath": "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm\\ProTherm.csproj"
             }
           }
         }

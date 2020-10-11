@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TKvpVMhpSuW5U9NLmVAxF7K5dHooXryn7FRD7ZrUSg+3AfxPYqtgxfmRXljzjJD/vzdc0Z3TTKfRHc/d/mO/OQ==",
+  "dgSpecHash": "jMWZxmE7A8IyeIoZNKcW8Tg6FJxGLE46yP2C+BrYeW+eBEFYHPxLYEmS0BHi51YPMbj8FxMhErl9MMIhevpwlw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\MSSA\\Protherm\\ProThermSln\\ProTherm\\ProTherm.csproj",
+  "projectFilePath": "D:\\GitHub\\WebApps\\Protherm\\ProThermSln\\ProTherm\\ProTherm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Seth\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Seth\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
