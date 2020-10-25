@@ -1,0 +1,133 @@
+﻿@model ProTherm.Protherm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Protherm</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EntryId" class="control-label"></label>
+                <input asp-for="EntryId" class="form-control" />
+                <span asp-validation-for="EntryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProteinName" class="control-label"></label>
+                <input asp-for="ProteinName" class="form-control" />
+                <span asp-validation-for="ProteinName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Source" class="control-label"></label>
+                <input asp-for="Source" class="form-control" />
+                <span asp-validation-for="Source" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Length" class="control-label"></label>
+                <input asp-for="Length" class="form-control" />
+                <span asp-validation-for="Length" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MolecularWt" class="control-label"></label>
+                <input asp-for="MolecularWt" class="form-control" />
+                <span asp-validation-for="MolecularWt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PirId" class="control-label"></label>
+                <input asp-for="PirId" class="form-control" />
+                <span asp-validation-for="PirId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SwissProtId" class="control-label"></label>
+                <input asp-for="SwissProtId" class="form-control" />
+                <span asp-validation-for="SwissProtId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EcNum" class="control-label"></label>
+                <input asp-for="EcNum" class="form-control" />
+                <span asp-validation-for="EcNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PmdNum" class="control-label"></label>
+                <input asp-for="PmdNum" class="form-control" />
+                <span asp-validation-for="PmdNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WtPdb" class="control-label"></label>
+                <input asp-for="WtPdb" class="form-control" />
+                <span asp-validation-for="WtPdb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MutPdb" class="control-label"></label>
+                <input asp-for="MutPdb" class="form-control" />
+                <span asp-validation-for="MutPdb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WtPdbUrl" class="control-label"></label>
+                <input asp-for="WtPdbUrl" class="form-control" />
+                <span asp-validation-for="WtPdbUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MutPdbUrl" class="control-label"></label>
+                <input asp-for="MutPdbUrl" class="form-control" />
+                <span asp-validation-for="MutPdbUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mutation" class="control-label"></label>
+                <input asp-for="Mutation" class="form-control" />
+                <span asp-validation-for="Mutation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chain" class="control-label"></label>
+                <input asp-for="Chain" class="form-control" />
+                <span asp-validation-for="Chain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DGH2o" class="control-label"></label>
+                <input asp-for="DGH2o" class="form-control" />
+                <span asp-validation-for="DGH2o" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DdGH2o" class="control-label"></label>
+                <input asp-for="DdGH2o" class="form-control" />
+                <span asp-validation-for="DdGH2o" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DG" class="control-label"></label>
+                <input asp-for="DG" class="form-control" />
+                <span asp-validation-for="DG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DdG" class="control-label"></label>
+                <input asp-for="DdG" class="form-control" />
+                <span asp-validation-for="DdG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TM" class="control-label"></label>
+                <input asp-for="TM" class="form-control" />
+                <span asp-validation-for="TM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DTM" class="control-label"></label>
+                <input asp-for="DTM" class="form-control" />
+                <span asp-validation-for="DTM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

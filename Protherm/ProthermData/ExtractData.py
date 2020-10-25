@@ -15,17 +15,16 @@ def GetInfo(line):
     
     info = line.split()
     if len(info) < 2:
-        return "Null"
+        return ""
     
     elif len(info) == 2:
-        if info[1] == "-":
-            return "Null"
+        if info[1] == "-" or info[1] == "_":
+            return ""
         else: return info[1]
     
     elif len(info) > 2:
         
-        return " ".join( info[1:len(info)] )
-    
+        return " ".join( info[1:len(info)] ).replace(", "," | ")
 
 # Entry Format
     # 0: ID number
@@ -72,17 +71,14 @@ def GetInfo(line):
     # 50: Related entries
 
 f = open("Protherm.csv","w")
-f.write(
-    """
-    EntryID,Protein Name,Source,Length,Molecular Wt,PIR ID,SwissProtID,EC Number,PMD NO.,WT PDB,Mutant PDB,Mutation,Chain,dG_H2O,ddG_H2O,dG,ddG,T_m,dT_m
-    """)
+f.write("EntryID,ProteinName,Source,Length,Molecular_Wt,PIR_ID,Swiss_Prot_ID,EC_Num,PMD_Num,WT_PDB,Mut_PDB,WT_PDB_URL,Mut_PDB_URL,Mutation,Chain,dG_H2O,ddG_H2O,dG,ddG,T_m,dT_m\n")
 
-for i in range(1, 22492):
+for i in range(1, 501):
 
     entry = data[i].strip().split('\n')
     
     # Protein info
-    entryid =       GetInfo(entry[0])
+    entryid =       GetInfo(entry[0])        
     protein_name =  GetInfo(entry[2])
     source =        GetInfo(entry[3])
     length =        GetInfo(entry[4])
@@ -92,7 +88,14 @@ for i in range(1, 22492):
     ecnum =         GetInfo(entry[8])
     pmdnum =        GetInfo(entry[9])
     wtpdb =         GetInfo(entry[10])
+    wtpdburl =      "https://www.rcsb.org/structure/"+wtpdb
     mutpdb =        GetInfo(entry[11])
+    
+    if mutpdb == "":
+        mutpdburl = ""
+    else:
+        mutpdburl = "https://www.rcsb.org/structure/"+mutpdb
+    
     mutation =      GetInfo(entry[12])
     mutchain =      GetInfo(entry[13])
     
@@ -109,8 +112,8 @@ for i in range(1, 22492):
     
     newentry = (entryid+","+protein_name+","+source+","+length+","+mw+","+
                 pirid+","+swissprotid+","+ecnum+","+pmdnum+","+wtpdb+","+
-                mutpdb+","+mutation+","+mutchain+","+dgh2o+","+ddgh2o+","+
-                dg+","+ddg+","+tm+","+dtm+"\n")
+                mutpdb+","+wtpdburl+","+mutpdburl+","+mutation+","+mutchain+
+                ","+dgh2o+","+ddgh2o+","+dg+","+ddg+","+tm+","+dtm+"\n")
     
     f.write(newentry)
     

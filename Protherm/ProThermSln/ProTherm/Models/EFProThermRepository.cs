@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProTherm.Models
 {
-    public class EFProThermRepository : IProThermRepository
+    public class EFProThermRepository : IProthermRepository
     {
-        private ProThermDbContext context;
+        private ProthermContext context;
 
-        public EFProThermRepository(ProThermDbContext ctx)
+        public EFProThermRepository(ProthermContext ctx)
         {
             context = ctx;
         }
 
-        public IQueryable<Mutant> Mutants => context.Mutants;
+        public IQueryable<Protherm> Protherms => context.Protherm;
     }
 }

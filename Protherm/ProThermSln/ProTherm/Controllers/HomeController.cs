@@ -10,29 +10,7 @@ namespace ProTherm.Controllers
 {
     public class HomeController : Controller
     {
-        private IProThermRepository repository;
-        public int PageSize = 4;
-
-        public HomeController(IProThermRepository repo)
-        {
-            repository = repo;
-        }
-
         public IActionResult Index() => View();
 
-        public IActionResult Search(int mutantPage = 1)
-            => View(new MutantsListViewModel
-            {
-                Mutants = repository.Mutants
-                    .OrderBy(m => m.mutantID)
-                    .Skip((mutantPage - 1) * PageSize)
-                    .Take(PageSize),
-                PagingInfo = new PagingInfo
-                {
-                    CurrentPage = mutantPage,
-                    ItemsPerPage = PageSize,
-                    TotalItems = repository.Mutants.Count()
-                }
-            });
     }
 }

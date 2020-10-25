@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace ProTherm.Models
 {
-    public interface IProThermRepository
+    public interface IProthermRepository
     {
-        IQueryable<Mutant> Mutants { get; }
+        IQueryable<Protherm> Protherms { get; }
     }
 }

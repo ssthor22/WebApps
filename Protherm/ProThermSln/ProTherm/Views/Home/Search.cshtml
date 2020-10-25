@@ -1,4 +1,4 @@
-﻿@model MutantsListViewModel
+﻿@*<!--@model MutantsListViewModel
 
 <h4>Search ProTherm Database</h4>
 <div>
@@ -100,17 +100,18 @@
 @foreach (var m in Model.Mutants)
 {
     <div class="card card-outline-primary m-1 p-1">
-        <h3>@m.name</h3>
-        <a href=@m.pdburl target="_blank" rel="noopener noreferrer"> @m.PDB </a>
-        Size: @m.size <br />
-        Chain: @m.chain <br />
-        Mutation: @m.original @m.site @m.mutation <br />
-        &Delta;&Delta;G: @m.ddg <br />
+        <h3>@m.ProteinName</h3>
+        <a href=@m.WT_PDB_URL target="_blank" rel="noopener noreferrer"> @m.WT_PDB </a>
+        Size: @m.Length <br />
+        Chain: @m.Chain <br />
+        Mutation: @m.Mutation <br />
+        &Delta;&Delta;G: @m.ddG_H2O <br />
     </div>
-}
+}-->
 
 <!-- Page numbers -->
-<div page-model="@Model.PagingInfo" page-action="Search" page-classes-enabled="true"
+<!--<div page-model="@Model.PagingInfo" page-action="Search" page-classes-enabled="true"
      page-class="btn" page-class-normal="btn-outline-dark"
      page-class-selected="btn-primary" class="btn-group" pull-right m-1">
-</div>
+</div>-->
+*@

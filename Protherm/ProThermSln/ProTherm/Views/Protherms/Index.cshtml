@@ -1,0 +1,269 @@
+﻿@model IEnumerable<ProTherm.Protherm> 
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Search ProTherm Database</h1>
+
+<div>
+    <div>
+        <input type="text" placeholder="Keywords" />
+    </div>
+
+    <form>
+        <label><b>Protein Size</b></label>
+        <div>
+            <label for="ProteinMinLen">Min Length</label>
+            <select id="ProteinMinLen" name="ProteinMinLen">
+                <option value="nomin"> No Min </option>
+                <option value="20"> 20 </option>
+                <option value="60"> 60 </option>
+                <option value="100"> 100 </option>
+                <option value="150"> 150 </option>
+                <option value="300"> 300 </option>
+                <option value="500"> 500 </option>
+                <option value="1000"> 1000 </option>
+            </select>
+
+            <label for="ProteinMaxLen">Max Length</label>
+            <select id="ProteinMaxLen" name="ProteinMaxLen">
+                <option value="nomax"> No Max </option>
+                <option value="20"> 20 </option>
+                <option value="60"> 60 </option>
+                <option value="100"> 100 </option>
+                <option value="150"> 150 </option>
+                <option value="300"> 300 </option>
+                <option value="500"> 500 </option>
+                <option value="1000"> 1000 </option>
+            </select>
+        </div>
+
+        <label><b>Mutation</b></label>
+        <div>
+            <label for="MutAA">Mutant AA</label>
+            <select id="MutAA" name="MutAA">
+                <option value="any"> Any </option>
+                <option value="A"> A </option>
+                <option value="C"> C </option>
+                <option value="D"> D </option>
+                <option value="E"> E </option>
+                <option value="F"> F </option>
+                <option value="G"> G </option>
+                <option value="H"> H </option>
+                <option value="I"> I </option>
+                <option value="K"> K </option>
+                <option value="L"> L </option>
+                <option value="M"> M </option>
+                <option value="N"> N </option>
+                <option value="P"> P </option>
+                <option value="Q"> Q </option>
+                <option value="R"> R </option>
+                <option value="S"> S </option>
+                <option value="T"> T </option>
+                <option value="V"> V </option>
+                <option value="W"> W </option>
+                <option value="Y"> Y </option>
+            </select>
+
+            <label for="WTAA">Wild Type AA</label>
+            <select id="WTAA" name="WTAA">
+                <option value="any"> Any </option>
+                <option value="A"> A </option>
+                <option value="C"> C </option>
+                <option value="D"> D </option>
+                <option value="E"> E </option>
+                <option value="F"> F </option>
+                <option value="G"> G </option>
+                <option value="H"> H </option>
+                <option value="I"> I </option>
+                <option value="K"> K </option>
+                <option value="L"> L </option>
+                <option value="M"> M </option>
+                <option value="N"> N </option>
+                <option value="P"> P </option>
+                <option value="Q"> Q </option>
+                <option value="R"> R </option>
+                <option value="S"> S </option>
+                <option value="T"> T </option>
+                <option value="V"> V </option>
+                <option value="W"> W </option>
+                <option value="Y"> Y </option>
+            </select>
+        </div>
+    </form>
+    <button type="submit">Search</button>
+</div>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Entry ID
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ProteinName)*@
+                Protein Name
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Source)*@
+                Source
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Length)*@
+                Length
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.MolecularWt)*@
+                Molecular Weight
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.PirId)*@
+                PIR ID
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.SwissProtId)*@
+                Swiss-Prot ID
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.EcNum)*@
+                EC NO.
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.PmdNum)*@
+                PMD NO.
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.WtPdb)*@
+                WT PDB
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.MutPdb)*@
+                Mutant PDB
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.WtPdbUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MutPdbUrl)
+                </th>*@
+            <th>
+                @*@Html.DisplayNameFor(model => model.Mutation)*@
+                Mutation
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Chain)*@
+                Chain
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DGH2o)*@
+                &Delta;G<sub>H<sub>2</sub>O</sub>
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DdGH2o)*@
+                &Delta;&Delta;G<sub>H<sub>2</sub>O</sub>
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DG)*@
+                &Delta;G
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DdG)*@
+                &Delta;&Delta;G
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.TM)*@
+                T<sub>m</sub>
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DTM)*@
+                &Delta;T<sub>m</sub>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.EntryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProteinName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Source)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Length)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MolecularWt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PirId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SwissProtId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EcNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PmdNum)
+                </td>
+                <td>
+                    <a href=@item.WtPdbUrl>@Html.DisplayFor(modelItem => item.WtPdb)</a>
+                </td>
+                <td>
+                    <a href=@item.MutPdbUrl>@Html.DisplayFor(modelItem => item.MutPdb)</a>
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.WtPdbUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MutPdbUrl)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mutation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Chain)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DGH2o)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DdGH2o)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DdG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTM)
+                </td>
+                @*<td>
+                    <a asp-action="Edit" asp-route-id="@item.EntryId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.EntryId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.EntryId">Delete</a>
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Page numbers -->
+@*<div page-model="@Model.PagingInfo" page-action="Search" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group" pull-right m-1">
+</div>*@

@@ -29,12 +29,12 @@ namespace ProTherm
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<ProThermDbContext>(opts =>
+            services.AddDbContext<ProthermContext>(opts =>
             {
                 opts.UseSqlServer(
                     Configuration["ConnectionStrings:ProThermConnection"]);
             });
-            services.AddScoped<IProThermRepository, EFProThermRepository>();
+            //services.AddScoped<IProThermRepository, EFProThermRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,13 +48,11 @@ namespace ProTherm
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllerRoute(
-                    "pagination",
-                    "Mutants/Page{mutantPage}",
-                    new { Controller = "Home", action = "Index" });
-                endpoints.MapDefaultControllerRoute();
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            SeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
         }
     }
 }
