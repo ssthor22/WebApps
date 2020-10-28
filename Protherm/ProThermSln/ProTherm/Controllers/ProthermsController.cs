@@ -14,7 +14,7 @@ namespace ProTherm.Models
     {
         private readonly ProthermContext _context;
 
-        public ProthermsController(ProthermContext context)/*, IProthermRepository repo)*/
+        public ProthermsController(ProthermContext context) /*, IProthermRepository repo)*/
         {
             _context = context;
             //repository = repo;
@@ -23,26 +23,49 @@ namespace ProTherm.Models
         //private IProthermRepository repository;
         //public int PageSize = 4;
 
-        //public IActionResult Search(int mutantPage = 1)
+        //public IActionResult Search(int ProthermPage = 1)
         //    => View(new ProthermListViewModel
         //    {
-        //        Protherms = repository.Protherms
+        //        Protherms = repository.Protherm
         //            .OrderBy(m => m.EntryId)
-        //            .Skip((mutantPage - 1) * PageSize)
+        //            .Skip((ProthermPage - 1) * PageSize)
         //            .Take(PageSize),
         //        PagingInfo = new PagingInfo
         //        {
         //            CurrentPage = mutantPage,
         //            ItemsPerPage = PageSize,
-        //            TotalItems = repository.Protherms.Count()
+        //            TotalItems = repository.Protherm.Count()
         //        }
         //    });
 
 
         // GET: Protherms
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index(string searchString, int ProteinMinLen, int ProteinMaxLen)
+        //{
+        //    ViewData["CurrentFilter"] = searchString;
+
+        //    var proteins = from p in _context.Protherm select p;
+
+        //    if (!String.IsNullOrEmpty(searchString)) // if searchString is not empty
+        //    {
+        //        proteins = proteins.Where(p =>
+        //                                    p.ProteinName.Contains(searchString));
+
+        //    }
+
+        //    proteins = (from p in _context.Protherm where (p.Length >= ProteinMinLen) && (p.Length <= ProteinMaxLen) select p);
+
+        //    //return View(await _context.Protherm.ToListAsync());
+        //    return View(await proteins.AsNoTracking().ToListAsync());
+        //}
+
+        public async Task<IActionResult> Index(ProthermSearchModel searchModel)
         {
-            return View(await _context.Protherm.ToListAsync());
+            ViewData["searchString"] = searchModel.ProteinName;
+            var search = new ProthermSearchLogic();
+            var model = search.GetProtherm(searchModel);
+
+            return View(await model.ToListAsync());
         }
 
         // GET: Protherms/Details/5
